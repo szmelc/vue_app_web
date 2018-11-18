@@ -7,11 +7,24 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
   name: 'App',
+  computed: {
+    ...mapGetters({ currentUser: 'currentUser' })
+  },
   updated () {
-    if (!localStorage.token && this.$route.path !== '/') {
-      this.$router.push('/?redirect=' + this.$route.path)
+    this.checkCurrentLogin()
+  },
+  created () {
+    this.checkCurrentLogin()
+  },
+  methods: {
+    checkCurrentLogin () {
+      if (!this.currentUser && this.$route.path !== '/') {
+        this.$router.push('/?redirect=' + this.$route.path)
+      }
     }
   }
 }
