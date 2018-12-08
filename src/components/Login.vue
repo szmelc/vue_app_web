@@ -72,14 +72,18 @@ export default {
 </script>
 
 <style lang="css">
-body {
-  background: #605B56;
-}
 
 .login-wrapper {
   background: #fff;
   width: 70%;
   margin: 12% auto;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .03);
+  animation: fadein 0.6s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .form-signin {
