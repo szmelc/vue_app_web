@@ -5,7 +5,6 @@ export default class User {
   static from (token) {
     try {
       let obj = jwtDecode(token)
-      debugger
       return new User(obj)
     } catch (_) {
       return null
@@ -17,7 +16,6 @@ export default class User {
     this.id = user_id 
     this.admin = admin
     this.email = email
-    debugger
   }
 
   get isAdmin () {
