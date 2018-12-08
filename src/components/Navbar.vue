@@ -1,10 +1,10 @@
 <template>
   <nav class="navbar navbar-dark bg-bookstore">
-    <a class="navbar-brand" href="/">Bookstore</a>
+    <a class="navbar-brand" href="/">Wishulistu</a>
 
     <span class="navbar-text">
-      {{ currentUser.email }}
-      <router-link to="/logout" class="btn btn-logout btn-sm">Logout</router-link>
+      <router-link :to="`/user/${currentUser.id}/profile`" exact>{{ currentUser.email }}</router-link>
+      <router-link to="/logout" class="btn btn-logout btn-sm" exact>Logout</router-link>
     </span>
 
   </nav>
@@ -15,21 +15,13 @@ import { mapGetters } from 'vuex'
 
 export default {
   name: 'Navbar',
-  created () {
-    this.dupa()
-  },
   computed: {
     ...mapGetters({ currentUser: 'currentUser' })
-  },
-  methods: {
-    dupa () {
-      debugger
-    }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .bg-bookstore {
   background: #605B56 !important;
 }
