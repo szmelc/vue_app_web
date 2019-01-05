@@ -3,8 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Logout from '@/components/Logout'
-import User from '@/components/User'
-import UserProfile from '@/components/UserProfile'
+import User from '@/components/user_page/User'
+import UserProfile from '@/components/user_page/UserProfile'
 
 Vue.use(Router)
 
