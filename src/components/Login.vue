@@ -8,6 +8,7 @@
       <label for="inputPassword" class="sr-only">Password</label>
       <input v-model="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
       <button class="btn btn-lg btn-primary btn-block" type="submit">{{ buttonText }}</button>
+      <router-link :to="`/sign_up`">Create account</router-link>
     </form>
   </div>
 </template>

@@ -27,14 +27,14 @@ export default {
     ...mapGetters({ currentUser: 'currentUser' })
   },
   updated () {
-    this.checkCurrentLogin()
+    // this.checkCurrentLogin()
   },
   created () {
-    this.checkCurrentLogin()
+    // this.checkCurrentLogin()
   },
   methods: {
     checkCurrentLogin () {
-      if (!this.currentUser && this.$route.path !== '/') {
+      if (!this.currentUser && (this.$route.path !== '/' || this.$route.path !== '/sign_in')) {
         this.$router.push('/?redirect=' + this.$route.path)
       }
     }
