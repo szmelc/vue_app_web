@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Main from '@/components/Main'
 import Login from '@/components/Login'
 import Logout from '@/components/Logout'
+import SignUp from '@/components/SignUp'
 import User from '@/components/user_page/User'
 import UserProfile from '@/components/user_page/UserProfile'
 
@@ -15,6 +16,11 @@ export default new Router({
       path: '/',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/sign_up',
+      name: 'SignUp',
+      component: SignUp
     },
     {
       path: '/logout',
@@ -33,8 +39,8 @@ export default new Router({
     },
     {
       path: '/main',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Main',
+      component: Main
     }
   ]
 })

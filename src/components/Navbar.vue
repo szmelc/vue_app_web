@@ -6,7 +6,6 @@
       <router-link :to="`/user/${currentUser.id}/profile`" exact>{{ currentUser.email }}</router-link>
       <router-link to="/logout" class="btn btn-logout btn-sm" exact>Logout</router-link>
     </span>
-
   </nav>
 </template>
 
